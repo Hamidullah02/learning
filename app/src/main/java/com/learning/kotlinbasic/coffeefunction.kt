@@ -3,10 +3,16 @@ package com.learning.kotlinbasic
 fun main() {
     var n=3
     repeat(n) {
-        var (sugarcounts ,name)= readln()!!.split(" ")
-        var sugarcount=sugarcounts.toLong()
-        makecoffee(sugarcount , name)
+        askcoffeedetail()
     }
+}
+
+fun askcoffeedetail(){
+    println("for who?")
+    var name =readln()
+    println("how much sugar ?")
+    var sugarcount= readln().toLong()
+    makecoffee(sugarcount,name)
 }
 
 
