@@ -1,6 +1,6 @@
 package com.learning.kotlinbasic
 
-class dog (val name:String,val breed:String ){
+class dog (val name:String,val breed:String ,var age:Int){
 
     init {
         bark(name)

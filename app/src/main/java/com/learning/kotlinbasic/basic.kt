@@ -2,13 +2,10 @@ package com.learning.kotlinbasic
 
 fun main() {
 
-//    var kutta = dog("kutta","deshi kutta")  //object of dog class
-//    println("${kutta.name} is ${kutta.breed}")
-
-
-     var mybook=book()
-     var custombook=book("harry potter","cant remember",1992)
-
+    var kutta = dog("kutta","deshi kutta", 1)  //object of dog class
+    println("${kutta.name} is ${kutta.breed} is ${kutta.age} year old")
+    kutta.age = 2
+    println("${kutta.name} is ${kutta.breed} is ${kutta.age} year old")
 
 
 

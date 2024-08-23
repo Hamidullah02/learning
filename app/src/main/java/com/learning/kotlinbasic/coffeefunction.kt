@@ -1,10 +1,17 @@
 package com.learning.kotlinbasic
 
+
+ data class coffeedetails(
+     val sugarcount:Int,
+     val name: String ,
+     val size:String,
+     val creameamount:Int
+ )
+
+
 fun main() {
-    var n=3
-    repeat(n) {
-        askcoffeedetail()
-    }
+    val denis = coffeedetails(0,"denis","large", 2)
+    makecoffee(denis)
 }
 
 fun askcoffeedetail(){
@@ -12,14 +19,14 @@ fun askcoffeedetail(){
     var name =readln()
     println("how much sugar ?")
     var sugarcount= readln().toLong()
-    makecoffee(sugarcount,name)
+   // makecoffee(sugarcount,name)
 }
 
 
-fun makecoffee(sugar:Long,name:String){
-    if(sugar<1) println("coffee with no sugar for $name")
-    else if(sugar == 1.toLong()){
-        println("1 cube of sugar for $name")
+fun makecoffee(coffeedetails:coffeedetails){
+    if(coffeedetails.sugarcount<1) println("coffee with no sugar for ${coffeedetails.name}")
+    else if(coffeedetails.sugarcount == 1){
+        println("1 cube of sugar for ${coffeedetails.name}")
     }
-    else println("$sugar cubes of sugar for $name")
+    else println("${coffeedetails.sugarcount} cubes of sugar for ${coffeedetails.name}")
 }
